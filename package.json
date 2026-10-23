@@ -1,0 +1,12 @@
+{
+  "name": "tabak-iz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tabak İz: okul yemekhanesinde Gemini ile tabak artığı ölçümü, çocuk geri bildirimi ve menü önerisi (PWA).",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

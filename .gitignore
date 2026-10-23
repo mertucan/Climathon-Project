@@ -1,0 +1,36 @@
+# --- Gizli anahtarlar ve yerel ortam ---
+.env
+.env.*
+!.env.example
+.vercel
+
+# --- Kişisel / yarışma form metinleri (e-posta, form cevapları, taslaklar) ---
+docs/FINAL_FORM_ANSWERS.md
+docs/VIDEO_SCRIPT.md
+Climathon Final.md
+Climathon_Forms.md
+Climathon_PDR_v1.pdf
+TASK_3_FORM_DRAFT.md
+AI_STUDIO_PROMPT.md
+*.draft.md
+notes/
+
+# --- Doküman kaynakları ve video dosyaları ---
+docs/*.html
+docs/doc.css
+*.mp4
+*.mov
+
+# --- Bağımlılıklar, derleme ve günlükler ---
+node_modules/
+npm-debug.log*
+*.log
+*.tmp
+
+# --- İşletim sistemi ve editör dosyaları ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

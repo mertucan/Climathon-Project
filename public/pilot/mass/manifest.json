@@ -1,0 +1,643 @@
+{
+ "version": 1,
+ "method": "Nutrition5k (Google, CVPR 2021): kafeterya tabakları, her malzeme terazide tartılmış; toplam kütle ve enerji gerçek ölçümdür.",
+ "citation": "Thames Q. et al. Nutrition5k: Towards Automatic Nutritional Understanding of Generic Food. CVPR 2021.",
+ "items": [
+  {
+   "id": "n01",
+   "file": "/pilot/mass/n01.jpg",
+   "reference": {
+    "massGrams": 335.0,
+    "kcal": 574,
+    "proteinGrams": 51.7
+   },
+   "ingredients": [
+    {
+     "name": "beef",
+     "grams": 190.2
+    },
+    {
+     "name": "carrot",
+     "grams": 88.0
+    },
+    {
+     "name": "white rice",
+     "grams": 25.4
+    },
+    {
+     "name": "broccoli",
+     "grams": 12.7
+    },
+    {
+     "name": "kale",
+     "grams": 6.3
+    },
+    {
+     "name": "onions",
+     "grams": 2.5
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1563307519",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1563307519/rgb.png"
+   }
+  },
+  {
+   "id": "n02",
+   "file": "/pilot/mass/n02.jpg",
+   "reference": {
+    "massGrams": 241.0,
+    "kcal": 361,
+    "proteinGrams": 14.7
+   },
+   "ingredients": [
+    {
+     "name": "pizza",
+     "grams": 103.0
+    },
+    {
+     "name": "mushroom",
+     "grams": 54.0
+    },
+    {
+     "name": "spinach (raw)",
+     "grams": 39.2
+    },
+    {
+     "name": "asparagus",
+     "grams": 22.0
+    },
+    {
+     "name": "onions",
+     "grams": 6.3
+    },
+    {
+     "name": "olive oil",
+     "grams": 6.3
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1559590005",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1559590005/rgb.png"
+   }
+  },
+  {
+   "id": "n03",
+   "file": "/pilot/mass/n03.jpg",
+   "reference": {
+    "massGrams": 572.0,
+    "kcal": 788,
+    "proteinGrams": 108.7
+   },
+   "ingredients": [
+    {
+     "name": "chicken",
+     "grams": 334.0
+    },
+    {
+     "name": "avocado",
+     "grams": 125.0
+    },
+    {
+     "name": "broccoli",
+     "grams": 71.0
+    },
+    {
+     "name": "mixed greens",
+     "grams": 42.0
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1568401064",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1568401064/rgb.png"
+   }
+  },
+  {
+   "id": "n04",
+   "file": "/pilot/mass/n04.jpg",
+   "reference": {
+    "massGrams": 186.0,
+    "kcal": 258,
+    "proteinGrams": 30.9
+   },
+   "ingredients": [
+    {
+     "name": "chicken",
+     "grams": 92.2
+    },
+    {
+     "name": "white rice",
+     "grams": 37.0
+    },
+    {
+     "name": "green beans",
+     "grams": 11.0
+    },
+    {
+     "name": "wheat berry",
+     "grams": 9.2
+    },
+    {
+     "name": "arugula",
+     "grams": 7.4
+    },
+    {
+     "name": "mixed greens",
+     "grams": 4.9
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1560456370",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1560456370/rgb.png"
+   }
+  },
+  {
+   "id": "n05",
+   "file": "/pilot/mass/n05.jpg",
+   "reference": {
+    "massGrams": 305.0,
+    "kcal": 250,
+    "proteinGrams": 14.2
+   },
+   "ingredients": [
+    {
+     "name": "caesar salad",
+     "grams": 92.0
+    },
+    {
+     "name": "brussels sprouts",
+     "grams": 64.0
+    },
+    {
+     "name": "white rice",
+     "grams": 57.9
+    },
+    {
+     "name": "chicken thighs",
+     "grams": 27.1
+    },
+    {
+     "name": "onions",
+     "grams": 20.3
+    },
+    {
+     "name": "kale",
+     "grams": 14.5
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1565208637",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1565208637/rgb.png"
+   }
+  },
+  {
+   "id": "n06",
+   "file": "/pilot/mass/n06.jpg",
+   "reference": {
+    "massGrams": 497.0,
+    "kcal": 638,
+    "proteinGrams": 45.1
+   },
+   "ingredients": [
+    {
+     "name": "avocado",
+     "grams": 90.0
+    },
+    {
+     "name": "salmon",
+     "grams": 86.3
+    },
+    {
+     "name": "beef",
+     "grams": 55.0
+    },
+    {
+     "name": "kale",
+     "grams": 44.6
+    },
+    {
+     "name": "tomatoes",
+     "grams": 44.0
+    },
+    {
+     "name": "mushroom",
+     "grams": 39.0
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1568315177",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1568315177/rgb.png"
+   }
+  },
+  {
+   "id": "n07",
+   "file": "/pilot/mass/n07.jpg",
+   "reference": {
+    "massGrams": 304.0,
+    "kcal": 398,
+    "proteinGrams": 22.7
+   },
+   "ingredients": [
+    {
+     "name": "pineapple",
+     "grams": 149.0
+    },
+    {
+     "name": "scrambled eggs",
+     "grams": 131.0
+    },
+    {
+     "name": "bacon",
+     "grams": 24.0
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1563555563",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1563555563/rgb.png"
+   }
+  },
+  {
+   "id": "n08",
+   "file": "/pilot/mass/n08.jpg",
+   "reference": {
+    "massGrams": 609.0,
+    "kcal": 905,
+    "proteinGrams": 108.8
+   },
+   "ingredients": [
+    {
+     "name": "chicken",
+     "grams": 275.4
+    },
+    {
+     "name": "caesar salad",
+     "grams": 93.0
+    },
+    {
+     "name": "pasta",
+     "grams": 66.9
+    },
+    {
+     "name": "pork",
+     "grams": 51.5
+    },
+    {
+     "name": "brown rice",
+     "grams": 27.5
+    },
+    {
+     "name": "carrot",
+     "grams": 27.5
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1564082462",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1564082462/rgb.png"
+   }
+  },
+  {
+   "id": "n09",
+   "file": "/pilot/mass/n09.jpg",
+   "reference": {
+    "massGrams": 389.0,
+    "kcal": 512,
+    "proteinGrams": 28.9
+   },
+   "ingredients": [
+    {
+     "name": "pork",
+     "grams": 92.2
+    },
+    {
+     "name": "rice noodles",
+     "grams": 64.4
+    },
+    {
+     "name": "mixed greens",
+     "grams": 32.2
+    },
+    {
+     "name": "cabbage",
+     "grams": 32.2
+    },
+    {
+     "name": "spinach (raw)",
+     "grams": 27.2
+    },
+    {
+     "name": "chard",
+     "grams": 18.1
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1562958809",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562958809/rgb.png"
+   }
+  },
+  {
+   "id": "n10",
+   "file": "/pilot/mass/n10.jpg",
+   "reference": {
+    "massGrams": 415.0,
+    "kcal": 420,
+    "proteinGrams": 17.9
+   },
+   "ingredients": [
+    {
+     "name": "scrambled eggs",
+     "grams": 147.0
+    },
+    {
+     "name": "berries",
+     "grams": 85.0
+    },
+    {
+     "name": "pineapple",
+     "grams": 80.0
+    },
+    {
+     "name": "roasted potatoes",
+     "grams": 66.0
+    },
+    {
+     "name": "broccoli",
+     "grams": 36.1
+    },
+    {
+     "name": "olive oil",
+     "grams": 0.9
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1562691032",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562691032/rgb.png"
+   }
+  },
+  {
+   "id": "n11",
+   "file": "/pilot/mass/n11.jpg",
+   "reference": {
+    "massGrams": 289.0,
+    "kcal": 454,
+    "proteinGrams": 32.6
+   },
+   "ingredients": [
+    {
+     "name": "beef",
+     "grams": 110.7
+    },
+    {
+     "name": "roasted potatoes",
+     "grams": 90.0
+    },
+    {
+     "name": "bell peppers",
+     "grams": 54.0
+    },
+    {
+     "name": "millet",
+     "grams": 14.8
+    },
+    {
+     "name": "shallots",
+     "grams": 7.4
+    },
+    {
+     "name": "onions",
+     "grams": 3.7
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1561575327",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1561575327/rgb.png"
+   }
+  },
+  {
+   "id": "n12",
+   "file": "/pilot/mass/n12.jpg",
+   "reference": {
+    "massGrams": 186.0,
+    "kcal": 291,
+    "proteinGrams": 9.3
+   },
+   "ingredients": [
+    {
+     "name": "potatoes",
+     "grams": 96.0
+    },
+    {
+     "name": "white rice",
+     "grams": 54.0
+    },
+    {
+     "name": "almonds",
+     "grams": 25.0
+    },
+    {
+     "name": "spinach (raw)",
+     "grams": 11.0
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1558547205",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1558547205/rgb.png"
+   }
+  },
+  {
+   "id": "n13",
+   "file": "/pilot/mass/n13.jpg",
+   "reference": {
+    "massGrams": 405.0,
+    "kcal": 412,
+    "proteinGrams": 43.3
+   },
+   "ingredients": [
+    {
+     "name": "fish",
+     "grams": 139.3
+    },
+    {
+     "name": "asparagus",
+     "grams": 121.0
+    },
+    {
+     "name": "pork",
+     "grams": 47.1
+    },
+    {
+     "name": "white rice",
+     "grams": 45.0
+    },
+    {
+     "name": "country rice",
+     "grams": 27.9
+    },
+    {
+     "name": "brown rice",
+     "grams": 6.3
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1560369403",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1560369403/rgb.png"
+   }
+  },
+  {
+   "id": "n14",
+   "file": "/pilot/mass/n14.jpg",
+   "reference": {
+    "massGrams": 291.0,
+    "kcal": 351,
+    "proteinGrams": 27.6
+   },
+   "ingredients": [
+    {
+     "name": "caesar salad",
+     "grams": 105.0
+    },
+    {
+     "name": "chicken",
+     "grams": 54.4
+    },
+    {
+     "name": "country rice",
+     "grams": 45.0
+    },
+    {
+     "name": "cheese pizza",
+     "grams": 43.0
+    },
+    {
+     "name": "green beans",
+     "grams": 28.3
+    },
+    {
+     "name": "wheat berry",
+     "grams": 5.4
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1562876732",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562876732/rgb.png"
+   }
+  },
+  {
+   "id": "n15",
+   "file": "/pilot/mass/n15.jpg",
+   "reference": {
+    "massGrams": 563.0,
+    "kcal": 907,
+    "proteinGrams": 117.9
+   },
+   "ingredients": [
+    {
+     "name": "chicken",
+     "grams": 222.0
+    },
+    {
+     "name": "steak",
+     "grams": 182.0
+    },
+    {
+     "name": "mixed greens",
+     "grams": 115.0
+    },
+    {
+     "name": "broccoli",
+     "grams": 44.0
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1568318408",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1568318408/rgb.png"
+   }
+  },
+  {
+   "id": "n16",
+   "file": "/pilot/mass/n16.jpg",
+   "reference": {
+    "massGrams": 336.0,
+    "kcal": 428,
+    "proteinGrams": 39.1
+   },
+   "ingredients": [
+    {
+     "name": "chicken thighs",
+     "grams": 149.2
+    },
+    {
+     "name": "mixed greens",
+     "grams": 56.5
+    },
+    {
+     "name": "green beans",
+     "grams": 34.0
+    },
+    {
+     "name": "quinoa",
+     "grams": 14.9
+    },
+    {
+     "name": "cherry tomatoes",
+     "grams": 14.1
+    },
+    {
+     "name": "olive oil",
+     "grams": 11.7
+    }
+   ],
+   "source": {
+    "dataset": "Nutrition5k",
+    "dish": "dish_1562094730",
+    "license": "CC BY 4.0",
+    "page": "https://github.com/google-research-datasets/Nutrition5k",
+    "image": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562094730/rgb.png"
+   }
+  }
+ ]
+}

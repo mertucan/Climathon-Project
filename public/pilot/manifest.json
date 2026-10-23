@@ -1,0 +1,376 @@
+{
+ "version": 1,
+ "method": "Tek değerlendiricinin görsel tahmini (Comstock benzeri), gerçek tartım değil; ±10-15 puan belirsizlik.",
+ "items": [
+  {
+   "id": "p01",
+   "file": "/pilot/p01.jpg",
+   "kind": "untouched",
+   "note": "Türk okul/esnaf menüsü: kuru fasulye ve pilav, dokunulmamış",
+   "reference": {
+    "totalLeftoverPercent": 100,
+    "foods": [
+     {
+      "name": "Kuru fasulye",
+      "leftoverPercent": 100
+     },
+     {
+      "name": "Pirinç pilavı",
+      "leftoverPercent": 100
+     }
+    ]
+   },
+   "source": {
+    "title": "Kuru fasulye ve pilav.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kuru_fasulye_ve_pilav.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "E4024"
+   }
+  },
+  {
+   "id": "p02",
+   "file": "/pilot/p02.jpg",
+   "kind": "untouched",
+   "note": "Okul tepsisi: yayla çorbası, ekmek, salata",
+   "reference": {
+    "totalLeftoverPercent": 100,
+    "foods": [
+     {
+      "name": "Yayla çorbası",
+      "leftoverPercent": 100
+     },
+     {
+      "name": "Ekmek",
+      "leftoverPercent": 100
+     },
+     {
+      "name": "Salata",
+      "leftoverPercent": 100
+     }
+    ]
+   },
+   "source": {
+    "title": "School menu with Yayla soup.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:School_menu_with_Yayla_soup.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "E4024"
+   }
+  },
+  {
+   "id": "p03",
+   "file": "/pilot/p03.jpg",
+   "kind": "untouched",
+   "note": "Finlandiya okul yemeği tepsisi",
+   "reference": {
+    "totalLeftoverPercent": 100,
+    "foods": [
+     {
+      "name": "Tavuk soslu patates",
+      "leftoverPercent": 100
+     },
+     {
+      "name": "Salata/havuç",
+      "leftoverPercent": 100
+     },
+     {
+      "name": "Ekmek",
+      "leftoverPercent": 100
+     }
+    ]
+   },
+   "source": {
+    "title": "Finnish school lunch.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Finnish_school_lunch.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Vkem"
+   }
+  },
+  {
+   "id": "p04",
+   "file": "/pilot/p04.jpg",
+   "kind": "partial",
+   "note": "Yarısı yenmiş hamburger ve patates",
+   "reference": {
+    "totalLeftoverPercent": 70,
+    "foods": [
+     {
+      "name": "Hamburger",
+      "leftoverPercent": 60
+     },
+     {
+      "name": "Patates kızartması",
+      "leftoverPercent": 85
+     }
+    ]
+   },
+   "source": {
+    "title": "Beefburger and fries half eaten at Highgate Cricket Club, Crouch End London.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Beefburger_and_fries_half_eaten_at_Highgate_Cricket_Club,_Crouch_End_London.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p05",
+   "file": "/pilot/p05.jpg",
+   "kind": "partial",
+   "note": "Yarı yenmiş ana yemek",
+   "reference": {
+    "totalLeftoverPercent": 55,
+    "foods": [
+     {
+      "name": "Ciğer",
+      "leftoverPercent": 65
+     },
+     {
+      "name": "Patates kızartması",
+      "leftoverPercent": 55
+     },
+     {
+      "name": "Pastırma/jambon",
+      "leftoverPercent": 50
+     }
+    ]
+   },
+   "source": {
+    "title": "Liver bacon and chips sausage egg tomato half-eaten at Starmugs Cafe on Lordship Lane Tottenham London England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Liver_bacon_and_chips_sausage_egg_tomato_half-eaten_at_Starmugs_Cafe_on_Lordship_Lane_Tottenham_London_England.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p06",
+   "file": "/pilot/p06.jpg",
+   "kind": "partial",
+   "note": "Balık ve patates, kısmen yenmiş",
+   "reference": {
+    "totalLeftoverPercent": 55,
+    "foods": [
+     {
+      "name": "Patates",
+      "leftoverPercent": 65
+     },
+     {
+      "name": "Balık",
+      "leftoverPercent": 50
+     }
+    ]
+   },
+   "source": {
+    "title": "Battered cod potato wedges leftovers Capel Manor College café Enfield London England 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Battered_cod_potato_wedges_leftovers_Capel_Manor_College_caf%C3%A9_Enfield_London_England_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p07",
+   "file": "/pilot/p07.jpg",
+   "kind": "partial",
+   "note": "Kahvaltı tabağı, yarısı kalmış",
+   "reference": {
+    "totalLeftoverPercent": 45,
+    "foods": [
+     {
+      "name": "Fasulye",
+      "leftoverPercent": 50
+     },
+     {
+      "name": "Patates kızartması",
+      "leftoverPercent": 55
+     },
+     {
+      "name": "Sosis",
+      "leftoverPercent": 50
+     }
+    ]
+   },
+   "source": {
+    "title": "Set breakfast leftover Rose Cafe West Green Road Tottenham London England 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Set_breakfast_leftover_Rose_Cafe_West_Green_Road_Tottenham_London_England_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p08",
+   "file": "/pilot/p08.jpg",
+   "kind": "partial",
+   "note": "Et ve bezelye, büyük kısmı yenmiş",
+   "reference": {
+    "totalLeftoverPercent": 30,
+    "foods": [
+     {
+      "name": "Et",
+      "leftoverPercent": 35
+     },
+     {
+      "name": "Bezelye",
+      "leftoverPercent": 20
+     }
+    ]
+   },
+   "source": {
+    "title": "Milano's Café pork loin and veg Russell Street Stroud Gloucestershire England 04.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Milano%27s_Caf%C3%A9_pork_loin_and_veg_Russell_Street_Stroud_Gloucestershire_England_04.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p09",
+   "file": "/pilot/p09.jpg",
+   "kind": "partial",
+   "note": "Kahvaltı tabağı, çoğu yenmiş",
+   "reference": {
+    "totalLeftoverPercent": 30,
+    "foods": [
+     {
+      "name": "Fasulye",
+      "leftoverPercent": 25
+     },
+     {
+      "name": "Sosis",
+      "leftoverPercent": 40
+     },
+     {
+      "name": "Pastırma",
+      "leftoverPercent": 50
+     },
+     {
+      "name": "Yumurta",
+      "leftoverPercent": 0
+     }
+    ]
+   },
+   "source": {
+    "title": "Fifteen restaurant fried breakfast eaten George Street Stroud Gloucestershire England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fifteen_restaurant_fried_breakfast_eaten_George_Street_Stroud_Gloucestershire_England.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p10",
+   "file": "/pilot/p10.jpg",
+   "kind": "finished",
+   "note": "Aynı tabağın (p05) yemek sonrası hali",
+   "reference": {
+    "totalLeftoverPercent": 20,
+    "foods": [
+     {
+      "name": "Ciğer",
+      "leftoverPercent": 25
+     },
+     {
+      "name": "Patates kızartması",
+      "leftoverPercent": 20
+     },
+     {
+      "name": "Pastırma",
+      "leftoverPercent": 15
+     }
+    ]
+   },
+   "source": {
+    "title": "Liver bacon and chips sausage egg tomato remains at Starmugs Cafe on Lordship Lane Tottenham London England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Liver_bacon_and_chips_sausage_egg_tomato_remains_at_Starmugs_Cafe_on_Lordship_Lane_Tottenham_London_England.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p11",
+   "file": "/pilot/p11.jpg",
+   "kind": "finished",
+   "note": "Kahvaltı, az miktar kalmış",
+   "reference": {
+    "totalLeftoverPercent": 20,
+    "foods": [
+     {
+      "name": "Domates",
+      "leftoverPercent": 60
+     },
+     {
+      "name": "Fasulye",
+      "leftoverPercent": 25
+     }
+    ]
+   },
+   "source": {
+    "title": "Milano's Café breakfast empty plate Russell Street Stroud Gloucestershire England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Milano%27s_Caf%C3%A9_breakfast_empty_plate_Russell_Street_Stroud_Gloucestershire_England.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p12",
+   "file": "/pilot/p12.jpg",
+   "kind": "finished",
+   "note": "Pazar yemeği, sebze kalıntısı",
+   "reference": {
+    "totalLeftoverPercent": 10,
+    "foods": [
+     {
+      "name": "Bezelye/fasulye",
+      "leftoverPercent": 25
+     },
+     {
+      "name": "Et",
+      "leftoverPercent": 0
+     }
+    ]
+   },
+   "source": {
+    "title": "Sunday roast empty plate Garnon Bushes public house Coopersale Epping Essex England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sunday_roast_empty_plate_Garnon_Bushes_public_house_Coopersale_Epping_Essex_England.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p13",
+   "file": "/pilot/p13.jpg",
+   "kind": "finished",
+   "note": "Bitmiş tabak, yalnızca sos izi",
+   "reference": {
+    "totalLeftoverPercent": 2,
+    "foods": [
+     {
+      "name": "Yemek izleri",
+      "leftoverPercent": 2
+     }
+    ]
+   },
+   "source": {
+    "title": "Finished meal empty plate at Highgate Cricket Club, Crouch End, plan view.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Finished_meal_empty_plate_at_Highgate_Cricket_Club,_Crouch_End,_plan_view.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Acabashi"
+   }
+  },
+  {
+   "id": "p14",
+   "file": "/pilot/p14.jpg",
+   "kind": "finished",
+   "note": "Bölmeli tepsi, neredeyse boş",
+   "reference": {
+    "totalLeftoverPercent": 2,
+    "foods": [
+     {
+      "name": "Yemek izleri",
+      "leftoverPercent": 2
+     }
+    ]
+   },
+   "source": {
+    "title": "Empty Food plate with minimal food wastage.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Empty_Food_plate_with_minimal_food_wastage.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Mallikarjunasj"
+   }
+  }
+ ]
+}
