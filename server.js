@@ -66,4 +66,4 @@ const server = createServer(async (req, res) => {
 });
 // Gemini ücretsiz sürümde uzun sürebilir; istek süresine üst sınır koyma.
 server.requestTimeout = 0;
-server.listen(port, () => console.log(`Tabak İz: http://localhost:${port}  (Gemini: ${process.env.GEMINI_API_KEY ? 'açık' : 'anahtar yok, demo modu'})`));
+server.listen(port, () => console.log(`Kırıntı: http://localhost:${port}  (Gemini: ${process.env.GEMINI_API_KEY ? 'açık' : 'anahtar yok, demo modu'})`));

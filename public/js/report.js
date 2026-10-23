@@ -27,7 +27,7 @@ export async function printReport() {
 
   document.getElementById('print-root').innerHTML = `<article class="report">
     <header class="r-head">
-      <div><h1>${t('Okul Etki Raporu')}</h1><p>${esc(s.schoolName)} · ${t('Tabak İz ile tabak artığı ölçümü')}</p></div>
+      <div><h1>${t('Okul Etki Raporu')}</h1><p>${esc(s.schoolName)} · ${t('Kırıntı ile tabak artığı ölçümü')}</p></div>
       <div class="r-meta">${dates.length ? `${esc(date(dates[0], { day: 'numeric', month: 'long' }))} – ${esc(date(dates.at(-1), { day: 'numeric', month: 'long', year: 'numeric' }))}` : ''}<br>${t('Oluşturulma')}: ${esc(new Date().toLocaleDateString(document.documentElement.lang === 'en' ? 'en-GB' : 'tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }))}</div>
     </header>
     ${S.hasSample() ? `<p class="r-warn">${t('Not: Bu rapordaki geçmiş haftalar sentetik örnek pilot verisi içerir; gerçek pilot sonucu değildir.')}</p>` : ''}
@@ -81,7 +81,7 @@ export async function printReport() {
       <section>${pilotPoints.length ? pilotScatter(pilotPoints) : ''}</section>
     </div>
 
-    <footer class="r-foot">${t('Yöntem: Gemini, önce/sonra tabak fotoğraflarından yemek bazında kalan miktarı tahmin eder. CO₂e ve su: Poore & Nemecek (2018), Water Footprint Network; besin: USDA FoodData Central, TÜBER 2022 (yaklaşık kategori değerleri). Fotoğraflar saklanmaz; veriler sınıf düzeyinde ve anonimdir.')} · Tabak İz · Climathon 2026</footer>
+    <footer class="r-foot">${t('Yöntem: Gemini, önce/sonra tabak fotoğraflarından yemek bazında kalan miktarı tahmin eder. CO₂e ve su: Poore & Nemecek (2018), Water Footprint Network; besin: USDA FoodData Central, TÜBER 2022 (yaklaşık kategori değerleri). Fotoğraflar saklanmaz; veriler sınıf düzeyinde ve anonimdir.')} · Kırıntı · Climathon 2026</footer>
   </article>`;
   await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
   window.print();

@@ -39,7 +39,7 @@ export const WORLD_GRAMS = [
   { label: 'İsveç, küçük öğrenciler', value: 18, metric: 'tabak artığı / öğrenci', ref: 6 }
 ];
 
-// USDA SNMCS (SY 2014-15) yemek grubuna göre tabak artığı [1] ve Tabak İz kategori eşlemesi.
+// USDA SNMCS (SY 2014-15) yemek grubuna göre tabak artığı [1] ve Kırıntı kategori eşlemesi.
 export const FOOD_GROUPS = [
   { label: 'Sebze', usda: 31, categories: ['sebze'] },
   { label: 'Süt / süt ürünü', usda: 29, categories: ['sut_urunu'] },
@@ -53,7 +53,7 @@ export const FOOD_GROUPS = [
 export const METHODS = [
   { name: 'Dijital fotoğraf + uzman', accuracy: 'Hastane validasyonunda tartımla r = 0,99, ortalama fark 4,7 g', effort: 'Fotoğraf hızlı, değerlendirme sonradan uzmanca', hardware: 'Kamera', ref: 9 },
   { name: 'Derin öğrenme (özel eğitimli)', accuracy: 'YOLOv11 mAP 0,343; U-Net mIoU %68,6 (tespit metriği, gram değil)', effort: 'Özel veri seti ve model eğitimi gerekir', hardware: 'Kamera + GPU', ref: [10, 11] },
-  { name: 'Tabak İz (Gemini, eğitim yok)', accuracy: 'pilot', effort: 'Saniyeler; yeni menüye eğitim gerekmez', hardware: 'Telefon / tablet', ref: null, ours: true }
+  { name: 'Kırıntı (Gemini, eğitim yok)', accuracy: 'pilot', effort: 'Saniyeler; yeni menüye eğitim gerekmez', hardware: 'Telefon / tablet', ref: null, ours: true }
 ];
 
 // Çözüm benchmark'ı. vendor: true = firma açıklaması, bağımsız doğrulanmadı.
@@ -63,12 +63,12 @@ export const SOLUTIONS = [
   { name: 'KITRO', hardware: 'Kamera + tartı cihazı', school: false, child: false, forecast: false, impact: 'Ort. %30 (firma)', ref: 12, vendor: true },
   { name: 'Nuvilab', hardware: 'Tepsi tarayıcı (kamera + sensör)', school: true, child: false, forecast: false, impact: 'Ort. %30, >%95 doğruluk (firma)', ref: 14, vendor: true },
   { name: 'Sabit kamera istasyonu + açık modeller', hardware: 'İade hattında kamera istasyonu, sunucu', school: true, child: false, forecast: false, impact: 'Simülasyon', ref: null },
-  { name: 'Tabak İz', hardware: 'Telefon / tablet', school: true, child: true, forecast: true, impact: 'Hedef −%25 (pilotla ölçülecek)', ref: null, ours: true }
+  { name: 'Kırıntı', hardware: 'Telefon / tablet', school: true, child: true, forecast: true, impact: 'Hedef −%25 (pilotla ölçülecek)', ref: null, ours: true }
 ];
 
-// Müdahalelerin etkisi: Tabak İz'in %25 hedefi firma açıklamalarının altında tutuldu.
+// Müdahalelerin etkisi: Kırıntı'nın %25 hedefi firma açıklamalarının altında tutuldu.
 export const INTERVENTIONS = [
   { label: 'Nudge + ölçüm, personel yemekhanesi (firma)', range: [0, 35], ref: 13, vendor: true },
   { label: 'Okul yemekhaneleri, tepsi tarayıcı (firma)', range: [30, 30], ref: 14, vendor: true },
-  { label: 'Tabak İz hedefi', range: [25, 25], ours: true }
+  { label: 'Kırıntı hedefi', range: [25, 25], ours: true }
 ];

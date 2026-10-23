@@ -1,7 +1,7 @@
 // English dictionary. Keys are the Turkish source strings used in t('...').
 export const EN = {
   // Genel
-  "Tabak İz: Okul yemeğinde israfı ölç, azalt": "Tabak İz: Measure and reduce school food waste",
+  "Kırıntı: Okul yemeğinde israfı ölç, azalt": "Kırıntı: Measure and reduce school food waste",
   "Bölümler": "Sections",
   "Ölç": "Measure",
   "Sınıf": "Class",
@@ -154,7 +154,7 @@ export const EN = {
   " (başlangıç haftasına göre {pct} daha az).": " ({pct} less than the baseline week).",
   " (başlangıç haftasına göre {pct} daha fazla).": " ({pct} more than the baseline week).",
   " Sınıf gezegeni seviye {level}. Evde de \"tabağına yiyebileceğin kadar al\" alışkanlığını destekleyebilirsiniz.": " The class planet is level {level}. You can support the \"take only what you can eat\" habit at home too.",
-  "Tabak İz haftalık özet": "Tabak İz weekly summary",
+  "Kırıntı haftalık özet": "Kırıntı weekly summary",
   "Özet panoya kopyalandı.": "Summary copied to the clipboard.",
   "Metin seçildi; kopyalayıp paylaşabilirsin.": "Text selected; you can copy and share it.",
 
@@ -325,7 +325,7 @@ export const EN = {
   "{n} ölçüm CSV olarak indirildi.": "{n} measurements downloaded as CSV.",
 
   // Karşılama
-  "Tabak İz'e hoş geldin": "Welcome to Tabak İz",
+  "Kırıntı'ya hoş geldin": "Welcome to Kırıntı",
   "Okul yemeğinde tabak artığını ölçen, çocuğa iklim odaklı geri bildirim ve mutfağa menü önerisi veren uygulama. Özel donanım gerekmez; telefon veya tablet yeterli.": "An app that measures school plate waste, gives children climate-focused feedback and gives the kitchen menu suggestions. No special hardware; a phone or tablet is enough.",
   "<strong>Ölç:</strong> \"Örnek tepsiyle dene\" ya da kendi tabağının önce/sonra fotoğrafını çek, Gemini ile analiz et; sonucu kahramanın sesiyle dinle.": "<strong>Measure:</strong> use \"Try the sample tray\" or photograph your own plate before/after, analyse it with Gemini and listen to the result in the hero's voice.",
   "<strong>Sınıf:</strong> Çocukların gördüğü gezegen, sınıf puanı ve İsrafsız Hafta yarışı.": "<strong>Class:</strong> the planet children see, the class score and the Zero-Waste Week race.",
@@ -379,7 +379,7 @@ export const EN = {
 
   // Rapor
   "Okul Etki Raporu": "School Impact Report",
-  "Tabak İz ile tabak artığı ölçümü": "Plate waste measurement with Tabak İz",
+  "Kırıntı ile tabak artığı ölçümü": "Plate waste measurement with Kırıntı",
   "Oluşturulma": "Generated",
   "Not: Bu rapordaki geçmiş haftalar sentetik örnek pilot verisi içerir; gerçek pilot sonucu değildir.": "Note: past weeks in this report contain synthetic sample pilot data, not real pilot results.",
   "Özet": "Summary",
@@ -415,23 +415,23 @@ Object.assign(EN, {
   "Sonuçlarının dünyadaki okul verileriyle karşılaştırması, ölçüm yöntemleri ve rakip çözümler, gerçek fotoğraflarla iki doğrulama pilotu ve kaynakça.": "How your results compare with school data worldwide, measurement methods and competing solutions, two validation pilots with real photos, and references.",
   "Kanıt sekmesine git": "Go to Evidence",
   "Kaynak {n}": "Source {n}",
-  "Tabak İz pilot okulu (örnek veri)": "Tabak İz pilot school (sample data)",
-  "Tabak İz ölçümleriniz": "Your Tabak İz measurements",
+  "Kırıntı pilot okulu (örnek veri)": "Kırıntı pilot school (sample data)",
+  "Kırıntı ölçümleriniz": "Your Kırıntı measurements",
   "servis edilen miktara göre tabak artığı": "plate leftover relative to the served amount",
   "tabak artığı / tabak": "plate leftover / plate",
   "Bu sayfadaki her dış rakam yayımlanmış bir kaynaktan gelir; köşeli parantezdeki numara aşağıdaki kaynakçayı gösterir. Firma açıklamaları ayrıca işaretlenmiştir.": "Every external figure on this page comes from a published source; the number in brackets points to the reference list below. Vendor claims are marked separately.",
   "Not": "Note",
-  "\"Tabak İz pilot okulu\" satırları uygulamadaki sentetik örnek veriden gelir; örnek veri literatürdeki yemek grubu oranlarına göre ayarlanmıştır. Gerçek okul verisi girildikçe bu satırlar gerçek ölçümünüzü gösterir.": "The \"Tabak İz pilot school\" rows come from the app's synthetic sample data, calibrated to food-group rates in the literature. As real school data is entered, these rows show your real measurements.",
+  "\"Kırıntı pilot okulu\" satırları uygulamadaki sentetik örnek veriden gelir; örnek veri literatürdeki yemek grubu oranlarına göre ayarlanmıştır. Gerçek okul verisi girildikçe bu satırlar gerçek ölçümünüzü gösterir.": "The \"Kırıntı pilot school\" rows come from the app's synthetic sample data, calibrated to food-group rates in the literature. As real school data is entered, these rows show your real measurements.",
   "Dünyada okul tabak artığı": "School plate waste around the world",
   "Çalışmalar farklı metrikler kullanır (kalori, hazırlanan yemek, maliyet). Çubuğun üzerine gelince metrik görünür.": "Studies use different metrics (calories, prepared food, cost). Hover over a bar to see the metric.",
   "Öğrenci başına gram": "Grams per student",
-  "Türkiye'de ilkokul düzeyinde sürekli ve tabak bazında ölçüm yapan yayımlanmış bir sistem bulunamadı; mevcut çalışmalar tek seferlik ve tartıma dayalı. Tabak İz bu boşluğu hedefler.": "No published system was found in Türkiye that measures primary-school plate waste continuously and per plate; existing studies are one-off and based on weighing. Tabak İz targets this gap.",
+  "Türkiye'de ilkokul düzeyinde sürekli ve tabak bazında ölçüm yapan yayımlanmış bir sistem bulunamadı; mevcut çalışmalar tek seferlik ve tartıma dayalı. Kırıntı bu boşluğu hedefler.": "No published system was found in Türkiye that measures primary-school plate waste continuously and per plate; existing studies are one-off and based on weighing. Kırıntı targets this gap.",
   "Hangi yemek grubu daha çok kalıyor?": "Which food group is left most?",
-  "ABD ulusal okul yemeği çalışması (6.253 tepsi, 165 okul) ile Tabak İz yemek grubu oranları.": "The US national school meal study (6,253 trays, 165 schools) vs Tabak İz food-group rates.",
+  "ABD ulusal okul yemeği çalışması (6.253 tepsi, 165 okul) ile Kırıntı yemek grubu oranları.": "The US national school meal study (6,253 trays, 165 schools) vs Kırıntı food-group rates.",
   "USDA SNMCS (ABD)": "USDA SNMCS (US)",
-  "Her iki kaynakta da sebze en çok, ana yemek en az bırakılan grup. Bu yüzden Tabak İz menü önerilerinde sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.": "In both sources vegetables are left most and main dishes least. That is why Tabak İz suggests changing how vegetables are served instead of removing them from the menu.",
+  "Her iki kaynakta da sebze en çok, ana yemek en az bırakılan grup. Bu yüzden Kırıntı menü önerilerinde sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.": "In both sources vegetables are left most and main dishes least. That is why Kırıntı suggests changing how vegetables are served instead of removing them from the menu.",
   "Ölçüm yöntemleri karşılaştırması": "Comparison of measurement methods",
-  "Örnek veri bu literatür sırasına göre ayarlandığı için iki seri benzer; gerçek ölçüm girildikçe yeşil seri sizin okulunuzun sırasını gösterir. USDA'ya göre sebze en çok, ana yemek en az bırakılan grup; bu yüzden Tabak İz sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.": "The two series look alike because the sample data was calibrated to this order from the literature; as real measurements are entered, the green series shows your school's order. In the USDA data vegetables are left most and main dishes least, so Tabak İz suggests changing how vegetables are served instead of removing them.",
+  "Örnek veri bu literatür sırasına göre ayarlandığı için iki seri benzer; gerçek ölçüm girildikçe yeşil seri sizin okulunuzun sırasını gösterir. USDA'ya göre sebze en çok, ana yemek en az bırakılan grup; bu yüzden Kırıntı sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.": "The two series look alike because the sample data was calibrated to this order from the literature; as real measurements are entered, the green series shows your school's order. In the USDA data vegetables are left most and main dishes least, so Kırıntı suggests changing how vegetables are served instead of removing them.",
   "USDA'ya göre sebze en çok, ana yemek en az bırakılan grup. Okulunuzun sırası farklıysa Gemini menü önerileri bu farka göre şekillenir; sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.": "In the USDA data vegetables are left most and main dishes least. If your school's order differs, Gemini's menu suggestions follow that difference; they change how vegetables are served instead of removing them.",
   "Yöntem": "Method",
   "Doğruluk kanıtı": "Accuracy evidence",
@@ -444,9 +444,9 @@ Object.assign(EN, {
   "Üretim tahmini": "Production forecast",
   "Bildirilen etki": "Reported impact",
   "firma": "vendor",
-  "Ticari sistemler ölçmenin israfı azalttığını gösteriyor; ancak çoğu özel donanım ve lisans gerektiriyor ve kurumsal mutfaklara odaklanıyor. Tabak İz'in farkı: donanımsız (telefon), çocuğa sesli ve suçlamayan geri bildirim, ertesi gün üretim tahmini ve Türk okul menüsü.": "Commercial systems show that measuring reduces waste, but most need special hardware and licences and focus on corporate kitchens. Tabak İz is different: no hardware (a phone), spoken non-judgemental feedback for children, next-day production forecasts and Turkish school menus.",
+  "Ticari sistemler ölçmenin israfı azalttığını gösteriyor; ancak çoğu özel donanım ve lisans gerektiriyor ve kurumsal mutfaklara odaklanıyor. Kırıntı'nın farkı: donanımsız (telefon), çocuğa sesli ve suçlamayan geri bildirim, ertesi gün üretim tahmini ve Türk okul menüsü.": "Commercial systems show that measuring reduces waste, but most need special hardware and licences and focus on corporate kitchens. Kırıntı is different: no hardware (a phone), spoken non-judgemental feedback for children, next-day production forecasts and Turkish school menus.",
   "Müdahaleler ne kadar azaltıyor?": "How much do interventions reduce waste?",
-  "Tabak İz'in %25 göreli azalma hedefi, firma açıklamalarındaki %30-35'in altında tutuldu. İsveç okullarında yalnızca farkındalık kampanyası bile porsiyon başına 13 g azaltma sağladı.": "Tabak İz's 25% relative reduction target was kept below the 30-35% in vendor statements. In Swedish schools an awareness campaign alone cut 13 g per portion.",
+  "Kırıntı'nın %25 göreli azalma hedefi, firma açıklamalarındaki %30-35'in altında tutuldu. İsveç okullarında yalnızca farkındalık kampanyası bile porsiyon başına 13 g azaltma sağladı.": "Kırıntı's 25% relative reduction target was kept below the 30-35% in vendor statements. In Swedish schools an awareness campaign alone cut 13 g per portion.",
   "Kaynakça": "References",
   "{n} gerçek fotoğrafta insan tahminine göre ortalama hata {mae} puan": "mean error of {mae} points vs a human estimate on {n} real photos",
   "{n} tartılmış tabakta gram hatası %{mape}": "{mape}% gram error on {n} weighed plates",
@@ -515,7 +515,7 @@ Object.assign(EN, {
   "YOLOv11 mAP 0,343; U-Net mIoU %68,6 (tespit metriği, gram değil)": "YOLOv11 mAP 0.343; U-Net mIoU 68.6% (detection metrics, not grams)",
   "Özel veri seti ve model eğitimi gerekir": "Needs a custom dataset and model training",
   "Kamera + GPU": "Camera + GPU",
-  "Tabak İz (Gemini, eğitim yok)": "Tabak İz (Gemini, no training)",
+  "Kırıntı (Gemini, eğitim yok)": "Kırıntı (Gemini, no training)",
   "Saniyeler; yeni menüye eğitim gerekmez": "Seconds; no retraining for new menus",
   "Telefon / tablet": "Phone / tablet",
 
@@ -536,11 +536,11 @@ Object.assign(EN, {
   "Sabit kamera istasyonu + açık modeller": "Fixed camera station + open models",
   "İade hattında kamera istasyonu, sunucu": "Camera station at the tray return line, server",
   "Simülasyon": "Simulation",
-  "Tabak İz": "Tabak İz",
+  "Kırıntı": "Kırıntı",
   "Hedef −%25 (pilotla ölçülecek)": "Target −25% (to be measured in the pilot)",
 
   // Müdahaleler
   "Nudge + ölçüm, personel yemekhanesi (firma)": "Nudges + measurement, staff canteen (vendor)",
   "Okul yemekhaneleri, tepsi tarayıcı (firma)": "School canteens, tray scanner (vendor)",
-  "Tabak İz hedefi": "Tabak İz target"
+  "Kırıntı hedefi": "Kırıntı target"
 });

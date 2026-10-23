@@ -5,8 +5,9 @@ import { analyzePlate, detectMode, prepareImage } from './ai.js';
 import { NUTRIENTS } from './impact.js';
 
 export const PILOT_SETS = {
-  visual: { manifest: '/pilot/manifest.json', key: 'tabakiz.pilot' },
-  mass: { manifest: '/pilot/mass/manifest.json', key: 'tabakiz.pilot.mass' }
+  visual: { manifest: '/pilot/manifest.json', key: 'kirinti.pilot' },
+  // v2: "servis edilmiş tabak" moduyla ölçülür; v1 sonuçları (sonra-fotoğrafı yolu) ayrı anahtarda kalır.
+  mass: { manifest: '/pilot/mass/manifest.json', key: 'kirinti.pilot.mass.v2' }
 };
 const manifests = {};
 
@@ -46,7 +47,8 @@ export async function runPilot({ set = 'visual', signal, onItem, onWait, restart
     onItem?.(index, items.length, item);
     const blob = await (await fetch(item.file, { signal })).blob();
     const image = await prepareImage(blob);
-    const { result, ms } = await analyzePlate({ after: { mimeType: image.mimeType, data: image.data }, ageGroup: '6-13', menu: [] }, { signal, onWait });
+    // Terazi seti servis edilmiş, yenmemiş tabaklardan oluşur: gerçek kullanımdaki "önce" fotoğrafı yolunu test eder.
+    const { result, ms } = await analyzePlate({ after: { mimeType: image.mimeType, data: image.data }, ageGroup: '6-13', menu: [], served: set === 'mass' }, { signal, onWait });
     const usable = !result.personVisible && result.imageOk && result.foods.length;
     const totals = plateTotals(result.foods);
     results.items[item.id] = {

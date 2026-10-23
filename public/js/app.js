@@ -604,8 +604,8 @@ async function renderEvidence() {
   const m = impactSummary();
   const base = m.baseline.plates ? m.baseline : S.summarize(st.measurements);
   const sample = S.hasSample();
-  const ourLabel = sample ? t('Tabak İz pilot okulu (örnek veri)') : t('Tabak İz ölçümleriniz');
-  // Tabak İz yemek grubu oranları (baseline dönemi; yoksa tüm ölçümler).
+  const ourLabel = sample ? t('Kırıntı pilot okulu (örnek veri)') : t('Kırıntı ölçümleriniz');
+  // Kırıntı yemek grubu oranları (baseline dönemi; yoksa tüm ölçümler).
   const baseList = m.baseline.plates ? st.measurements.filter(x => x.date <= st.settings.baselineEnd) : st.measurements;
   const byCat = {};
   for (const x of baseList) for (const f of x.foods) {
@@ -628,7 +628,7 @@ async function renderEvidence() {
       <h1>${t('Kanıt ve benchmark')}</h1>
       <p>${t('Bu sayfadaki her dış rakam yayımlanmış bir kaynaktan gelir; köşeli parantezdeki numara aşağıdaki kaynakçayı gösterir. Firma açıklamaları ayrıca işaretlenmiştir.')}</p>
     </div>
-    ${sample ? `<div class="banner"><strong>${t('Not')}</strong><p>${t('"Tabak İz pilot okulu" satırları uygulamadaki sentetik örnek veriden gelir; örnek veri literatürdeki yemek grubu oranlarına göre ayarlanmıştır. Gerçek okul verisi girildikçe bu satırlar gerçek ölçümünüzü gösterir.')}</p></div>` : ''}
+    ${sample ? `<div class="banner"><strong>${t('Not')}</strong><p>${t('"Kırıntı pilot okulu" satırları uygulamadaki sentetik örnek veriden gelir; örnek veri literatürdeki yemek grubu oranlarına göre ayarlanmıştır. Gerçek okul verisi girildikçe bu satırlar gerçek ölçümünüzü gösterir.')}</p></div>` : ''}
 
     <div class="card" id="bench-world">
       <h3>${t('Dünyada okul tabak artığı')}</h3>
@@ -636,16 +636,16 @@ async function renderEvidence() {
       ${compareBars(percentRows, 40)}
       <h4>${t('Öğrenci başına gram')}</h4>
       ${compareBars(gramRows, 100)}
-      <p class="small-muted">${t('Türkiye\'de ilkokul düzeyinde sürekli ve tabak bazında ölçüm yapan yayımlanmış bir sistem bulunamadı; mevcut çalışmalar tek seferlik ve tartıma dayalı. Tabak İz bu boşluğu hedefler.')}</p>
+      <p class="small-muted">${t('Türkiye\'de ilkokul düzeyinde sürekli ve tabak bazında ölçüm yapan yayımlanmış bir sistem bulunamadı; mevcut çalışmalar tek seferlik ve tartıma dayalı. Kırıntı bu boşluğu hedefler.')}</p>
     </div>
 
     <div class="card" id="bench-groups">
       <h3>${t('Hangi yemek grubu daha çok kalıyor?')}</h3>
-      <p class="small-muted">${t('ABD ulusal okul yemeği çalışması (6.253 tepsi, 165 okul) ile Tabak İz yemek grubu oranları.')} ${refLink(1)}</p>
+      <p class="small-muted">${t('ABD ulusal okul yemeği çalışması (6.253 tepsi, 165 okul) ile Kırıntı yemek grubu oranları.')} ${refLink(1)}</p>
       ${pairedBars(FOOD_GROUPS.map(g => { const ours = groupPct(g.categories); return { label: t(g.label), a: g.usda, aText: `USDA ${pct(g.usda)}`, b: ours, bText: ours == null ? null : pct(ours) }; }), 45)}
       <div class="legend"><span><i class="sw base"></i>${t('USDA SNMCS (ABD)')}</span><span><i class="sw int"></i>${esc(ourLabel)}</span></div>
       <p class="small-muted">${sample
-        ? t('Örnek veri bu literatür sırasına göre ayarlandığı için iki seri benzer; gerçek ölçüm girildikçe yeşil seri sizin okulunuzun sırasını gösterir. USDA\'ya göre sebze en çok, ana yemek en az bırakılan grup; bu yüzden Tabak İz sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.')
+        ? t('Örnek veri bu literatür sırasına göre ayarlandığı için iki seri benzer; gerçek ölçüm girildikçe yeşil seri sizin okulunuzun sırasını gösterir. USDA\'ya göre sebze en çok, ana yemek en az bırakılan grup; bu yüzden Kırıntı sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.')
         : t('USDA\'ya göre sebze en çok, ana yemek en az bırakılan grup. Okulunuzun sırası farklıysa Gemini menü önerileri bu farka göre şekillenir; sebzeyi menüden çıkarmak yerine sunumunu değiştirmeyi önerir.')}</p>
     </div>
 
@@ -665,7 +665,7 @@ async function renderEvidence() {
         <tbody>${SOLUTIONS.map(x => `<tr class="${x.ours ? 'ours' : ''}"><td><strong>${esc(t(x.name))}</strong> ${refLink(x.ref)}${x.vendor ? ` <span class="vendor">${t('firma')}</span>` : ''}</td>
           <td>${esc(t(x.hardware))}</td><td>${x.school ? '✓' : '–'}</td><td>${x.child ? '✓' : '–'}</td><td>${x.forecast ? '✓' : '–'}</td><td>${esc(t(x.impact))}</td></tr>`).join('')}</tbody>
       </table></div>
-      <p class="small-muted">${t('Ticari sistemler ölçmenin israfı azalttığını gösteriyor; ancak çoğu özel donanım ve lisans gerektiriyor ve kurumsal mutfaklara odaklanıyor. Tabak İz\'in farkı: donanımsız (telefon), çocuğa sesli ve suçlamayan geri bildirim, ertesi gün üretim tahmini ve Türk okul menüsü.')}</p>
+      <p class="small-muted">${t('Ticari sistemler ölçmenin israfı azalttığını gösteriyor; ancak çoğu özel donanım ve lisans gerektiriyor ve kurumsal mutfaklara odaklanıyor. Kırıntı\'nın farkı: donanımsız (telefon), çocuğa sesli ve suçlamayan geri bildirim, ertesi gün üretim tahmini ve Türk okul menüsü.')}</p>
     </div>
 
     <div class="card" id="bench-interventions">
@@ -673,7 +673,7 @@ async function renderEvidence() {
       <ul class="ranges">${INTERVENTIONS.map(x => `<li class="${x.ours ? 'ours' : ''}"><span class="range-label">${esc(t(x.label))} ${refLink(x.ref)}</span>
         <span class="range-track"><span class="range-fill" style="left:${x.range[0] / 50 * 100}%;width:${Math.max(1.5, (x.range[1] - x.range[0]) / 50 * 100)}%"></span></span>
         <span class="bar-value">${x.range[0] === x.range[1] ? pct(x.range[0]) : `${pct(x.range[0])}–${pct(x.range[1])}`}</span></li>`).join('')}</ul>
-      <p class="small-muted">${t('Tabak İz\'in %25 göreli azalma hedefi, firma açıklamalarındaki %30-35\'in altında tutuldu. İsveç okullarında yalnızca farkındalık kampanyası bile porsiyon başına 13 g azaltma sağladı.')} ${refLink(5)}</p>
+      <p class="small-muted">${t('Kırıntı\'nın %25 göreli azalma hedefi, firma açıklamalarındaki %30-35\'in altında tutuldu. İsveç okullarında yalnızca farkındalık kampanyası bile porsiyon başına 13 g azaltma sağladı.')} ${refLink(5)}</p>
     </div>
 
     <div class="card" id="pilot-card">${visual}</div>
@@ -685,7 +685,7 @@ async function renderEvidence() {
     </div>`;
 }
 
-// Yöntem tablosundaki Tabak İz satırı: pilot sonuçlarından canlı doğruluk metni.
+// Yöntem tablosundaki Kırıntı satırı: pilot sonuçlarından canlı doğruluk metni.
 function pilotAccuracyText() {
   const parts = [];
   const visual = summarizePilot(pilotCache.visual, getResults('visual'), 'visual');
@@ -841,7 +841,7 @@ function renderWelcome() {
   $('#welcome-dialog').innerHTML = `<form method="dialog">
     <div class="welcome">
       ${planetSvg(90, 96)}
-      <h2>${t('Tabak İz\'e hoş geldin')}</h2>
+      <h2>${t('Kırıntı\'ya hoş geldin')}</h2>
       <p>${t('Okul yemeğinde tabak artığını ölçen, çocuğa iklim odaklı geri bildirim ve mutfağa menü önerisi veren uygulama. Özel donanım gerekmez; telefon veya tablet yeterli.')}</p>
       <div class="lang-pick" role="radiogroup" aria-label="${esc(t('Dil'))}">${Object.entries(LANGUAGES).map(([code, l]) => `<button type="button" role="radio" aria-checked="${code === getLang()}" class="chip lang-chip ${code === getLang() ? 'on' : ''}" data-action="welcome-lang" data-lang="${code}">${flag(code)}<span>${l.name}</span></button>`).join('')}</div>
       <ol class="steps">
@@ -879,7 +879,7 @@ function changeLanguage(lang) {
 function tourSteps() {
   const go = tab => () => { if (currentTab() !== tab) show(tab); };
   return [
-    { enter: go('measure'), target: '.card.intro', title: t('Tabak İz\'e hoş geldin'), body: t('Bu 2 dakikalık tur ürünün tamamını gösterir: tabak ölçümü, çocuk geri bildirimi, mutfak kararları ve ölçülen etki. "Benim için yap" düğmeleri işlemi senin yerine çalıştırır.') },
+    { enter: go('measure'), target: '.card.intro', title: t('Kırıntı\'ya hoş geldin'), body: t('Bu 2 dakikalık tur ürünün tamamını gösterir: tabak ölçümü, çocuk geri bildirimi, mutfak kararları ve ölçülen etki. "Benim için yap" düğmeleri işlemi senin yerine çalıştırır.') },
     { enter: go('measure'), target: '[data-action=sample-tray]', title: t('1. Tabağı fotoğrafla'), body: t('Öğretmen yemekten önce ve sonra yalnızca tabağı çeker. Elinde tabak yoksa örnek tepsiyi yükle.'), action: { label: t('Örnek tepsiyi yükle'), run: useSampleTray, advance: true } },
     { enter: go('measure'), target: '[data-action=analyze]', title: t('2. Gemini ölçsün'), body: t('Gemini iki fotoğrafı karşılaştırıp her yemekten ne kadar kaldığını ölçer. Ücretsiz sürümde birkaç saniye ile birkaç dakika sürebilir; sonuç gelene kadar beklenir.'), action: { label: t('Analiz et'), run: async () => { if (!measure.after) await useSampleTray(); await runAnalysis(); }, advance: true } },
     { enter: go('measure'), target: () => $('.card.result') ? '.card.result .hero' : '#measure-result', title: t('3. Çocuğa geri bildirim'), body: t('Çocuk gezegen puanını ve kendisine özel, suçlamayan bir mesaj görür. Kalan yemek su, CO₂e ve kaçırılan besin olarak gösterilir.') },
@@ -918,12 +918,12 @@ const tabFromPath = (fallback = true) => {
 const currentTab = () => document.querySelector('.tabbar button.active')?.dataset.tab || 'measure';
 
 async function exportCsv() {
-  const name = `tabak-iz-${S.today()}.csv`;
+  const name = `kirinti-${S.today()}.csv`;
   const blob = new Blob(['﻿' + S.toCsv()], { type: 'text/csv;charset=utf-8' });
   // iOS'ta ana ekrandan açılan uygulamada indirme çalışmaz; paylaşım menüsüyle dosyayı ver.
   const file = new File([blob], name, { type: 'text/csv' });
   if (/iPhone|iPad|iPod/.test(navigator.userAgent) && navigator.canShare?.({ files: [file] })) {
-    try { await navigator.share({ files: [file], title: 'Tabak İz' }); } catch {}
+    try { await navigator.share({ files: [file], title: 'Kırıntı' }); } catch {}
     return;
   }
   const url = URL.createObjectURL(blob);
@@ -934,7 +934,7 @@ async function exportCsv() {
 }
 
 // ---------- Tema: Sistem → Açık → Koyu ----------
-const THEME_KEY = 'tabakiz.theme';
+const THEME_KEY = 'kirinti.theme';
 const THEME_LABEL = { system: 'Sistem teması', light: 'Açık tema', dark: 'Koyu tema' };
 const THEME_ICON = {
   system: '<path d="M12 3a9 9 0 1 0 0 18V3Z" fill="currentColor"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>',
@@ -988,7 +988,7 @@ document.addEventListener('click', async event => {
       const text = $('.parent')?.textContent || '';
       // Telefonda paylaşım menüsü, bilgisayarda doğrudan panoya kopyalama.
       if (navigator.share && matchMedia('(pointer: coarse)').matches) {
-        try { await navigator.share({ title: t('Tabak İz haftalık özet'), text }); return; }
+        try { await navigator.share({ title: t('Kırıntı haftalık özet'), text }); return; }
         catch (e) { if (e.name === 'AbortError') return; }
       }
       try { await navigator.clipboard.writeText(text); toast(t('Özet panoya kopyalandı.')); }

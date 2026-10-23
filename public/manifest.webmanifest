@@ -1,6 +1,6 @@
 {
-  "name": "Tabak İz: Okul yemeğinde israfı ölç",
-  "short_name": "Tabak İz",
+  "name": "Kırıntı: Okul yemeğinde israfı ölç",
+  "short_name": "Kırıntı",
   "description": "Tabak fotoğrafını Gemini ile analiz edip okul yemeği artığını ölçen, çocuğa geri bildirim ve mutfağa menü önerisi veren uygulama.",
   "lang": "tr",
   "start_url": "/olc",

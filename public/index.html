@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Tabak İz: Okul yemeğinde israfı ölç, azalt</title>
+  <title>Kırıntı: Okul yemeğinde israfı ölç, azalt</title>
   <meta name="description" content="Okul yemekhanesinde tabak fotoğrafını Gemini ile analiz edip artığı ölçen, çocuğa oyunlaştırılmış geri bildirim ve mutfağa menü önerisi veren uygulama.">
   <meta name="theme-color" content="#1f4d3a">
   <script>
+    // Uygulamanın eski adıyla (Tabak İz) kaydedilmiş verileri yeni ada taşı: ölçümler ve pilot sonuçları kaybolmasın.
+    try {
+      for (const key of Object.keys(localStorage)) {
+        if (!key.startsWith('tabakiz.')) continue;
+        const next = 'kirinti.' + key.slice(8);
+        if (localStorage.getItem(next) === null) localStorage.setItem(next, localStorage.getItem(key));
+        localStorage.removeItem(key);
+      }
+    } catch {}
     // Kayıtlı tema ve dili sayfa çizilmeden uygula (açılışta yanıp sönmeyi önler).
     try {
-      const t = localStorage.getItem('tabakiz.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
-      const l = localStorage.getItem('tabakiz.lang'); if (l) document.documentElement.lang = l;
+      const t = localStorage.getItem('kirinti.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      const l = localStorage.getItem('kirinti.lang'); if (l) document.documentElement.lang = l;
     } catch {}
   </script>
   <link rel="manifest" href="/manifest.webmanifest">
@@ -18,7 +27,7 @@
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Tabak İz">
+  <meta name="apple-mobile-web-app-title" content="Kırıntı">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -28,7 +37,7 @@
   <header class="topbar">
     <div class="brand">
       <img src="/icons/icon.svg" alt="" width="34" height="34">
-      <div><strong>Tabak İz</strong><small id="school-name">Pilot İlkokulu</small></div>
+      <div><strong>Kırıntı</strong><small id="school-name">Pilot İlkokulu</small></div>
     </div>
     <div class="topbar-actions">
       <span id="mode-badge" class="badge">…</span>

@@ -1,6 +1,6 @@
 // Uygulama kabuğunu önbelleğe alır; telefonda ana ekrandan açılınca hızlı ve çevrimdışı da açılır.
 // API istekleri (/api/*) hiçbir zaman önbelleğe alınmaz.
-const CACHE = 'tabakiz-v6';
+const CACHE = 'kirinti-v7';
 const SHELL = [
   '/', '/index.html', '/styles.css', '/manifest.webmanifest',
   '/js/app.js', '/js/store.js', '/js/ai.js', '/js/impact.js', '/js/sample-tray.js', '/shared/gemini-core.js',

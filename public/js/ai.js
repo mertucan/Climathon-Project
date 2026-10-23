@@ -69,7 +69,7 @@ export async function warmUp(path) {
 }
 
 // Son analiz sürelerinden beklenen süreyi tahmin eder (ilerleme çubuğu için).
-const TIMING_KEY = 'tabakiz.timing';
+const TIMING_KEY = 'kirinti.timing';
 export function expectedMs(kind) {
   const fallback = { analyze: 8000, suggest: 7000, tts: 6000 }[kind] || 7000;
   try { return JSON.parse(localStorage.getItem(TIMING_KEY) || '{}')[kind] || fallback; }
@@ -92,19 +92,19 @@ async function timed(kind, fn) {
 const demoDelay = signal => sleep(900, signal);
 
 // Kendi anahtarıyla doğrudan bağlantı: sunucudaki gibi yedek model zinciriyle çağırır.
-async function direct(body, normalize, signal) {
-  const { value, model } = await callWithFallback({ apiKey: getState().apiKey, body, signal });
+async function direct(body, normalize, signal, thinking = 'low') {
+  const { value, model } = await callWithFallback({ apiKey: getState().apiKey, body, signal, thinking });
   return { ...normalize(value), model };
 }
 
-export function analyzePlate({ before, after, ageGroup, menu }, { signal, onWait } = {}) {
+export function analyzePlate({ before, after, ageGroup, menu, served = false }, { signal, onWait } = {}) {
   const lang = getLang();
   return timed('analyze', async () => {
     const mode = await detectMode();
     if (mode === 'demo') { await demoDelay(signal); return { mode, result: demoAnalysis(menu) }; }
     const result = await withRetry(async () => mode === 'server'
-      ? postJson('/api/analyze', { before, after, ageGroup, menu, lang }, signal)
-      : direct(buildAnalysisRequest({ before, after, ageGroup, menu, lang }), normalizeAnalysis, signal),
+      ? postJson('/api/analyze', { before, after, ageGroup, menu, lang, served }, signal)
+      : direct(buildAnalysisRequest({ before, after, ageGroup, menu, lang, served }), normalizeAnalysis, signal, served ? 'medium' : 'low'),
     { signal, onWait });
     return { mode, result };
   });

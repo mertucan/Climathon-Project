@@ -62,14 +62,19 @@ const SUGGESTION_SCHEMA = {
   required: ['summary', 'suggestions']
 };
 
-export function buildAnalysisRequest({ before, after, ageGroup = '6-13', menu = [], lang = 'tr' }) {
+// Gram tahmini için ortak ölçek ve yoğunluk ipuçları (servis edilen miktar fotoğraftan ölçülürken kullanılır).
+const PORTION_GUIDE = 'GRAM TAHMİNİ: Her yemeğin tabakta kapladığı alanı ve yüksekliğini düşünerek hacmini, sonra yoğunluğuyla gramını tahmin et. Ölçek: standart yemek tabağı ~26-27 cm, servis tepsisi bölmesi ~12x15 cm, çatal ~19 cm. Yaklaşık yoğunluklar: pilav/makarna/bulgur ~0,8 g/cm³, et/tavuk/balık ~1,0, sebze yemeği ~0,9, yeşil salata ~0,2, çorba/yoğurt ~1,0, kızartma/patates ~0,6. Sos ve yağı ana yemeğe kat. Tahminin tabakta GÖRDÜĞÜN miktar olsun; standart porsiyon varsayma.';
+
+export function buildAnalysisRequest({ before, after, ageGroup = '6-13', menu = [], lang = 'tr', served = false }) {
   const parts = [];
   const menuLine = menu.length ? `Bugünkü menü (ipucu, görüntüyle doğrula): ${menu.join(', ')}.` : 'Menü bilgisi verilmedi; yemekleri görüntüden tanı.';
   parts.push({ text: [
     'Sen bir okul yemekhanesi tabak artığı ölçüm asistanısın. Görevin yalnızca tabak/tepsideki yiyecekleri analiz etmek.',
     'GİZLİLİK: İnsanlar, yüzler, eller veya kimlik hakkında hiçbir çıkarım yapma. Fotoğrafta bir kişi veya yüz görünüyorsa personVisible=true yap, foods boş bırak.',
-    before
-      ? 'İki fotoğraf verildi: ÖNCE (servis edilen tabak) ve SONRA (yemek sonrası tabak). Her yemek için servedGrams değerini ÖNCE fotoğrafından, leftoverPercent değerini iki fotoğrafı karşılaştırarak tahmin et.'
+    served
+      ? `Bu fotoğraf yemek ÖNCESİ çekildi: servis edilmiş, HİÇ YENMEMİŞ bir tabak. Her yemek için servedGrams değerini fotoğraftan ölç ve leftoverPercent=100 ver (henüz yenmedi). ${PORTION_GUIDE}`
+      : before
+      ? `İki fotoğraf verildi: ÖNCE (servis edilen tabak) ve SONRA (yemek sonrası tabak). Her yemek için servedGrams değerini ÖNCE fotoğrafından ölç, leftoverPercent değerini iki fotoğrafı karşılaştırarak tahmin et. ${PORTION_GUIDE}`
       : 'Yalnızca yemek SONRASI fotoğrafı verildi. Hiç yenmemiş görünen bir yemekte servedGrams değerini tabakta GÖRDÜĞÜN miktardan tahmin et (tabak ~26 cm, çatal ~19 cm ölçek olarak) ve leftoverPercent=100 ver. Kısmen yenmiş ya da tamamen yenmiş yemeklerde servis miktarı için Türkiye okul yemeği standart porsiyonlarını kullan (çorba ~200 g, ana yemek ~150 g, pilav/makarna ~150 g, salata ~80 g, yoğurt ~150 g, meyve ~120 g, ekmek ~50 g); tamamen yenmiş yemekleri izlerinden (sos, kırıntı) tanıyabiliyorsan leftoverPercent=0 ile listele.',
     menuLine,
     `Öğrenci yaş grubu: ${ageGroup}.`,
@@ -199,12 +204,14 @@ export function normalizeSuggestions(raw) {
   };
 }
 
-// Hız: bu görevler derin akıl yürütme gerektirmez; düşünme bütçesini düşük tutmak yanıt süresini belirgin kısaltır.
+// Hız: çoğu görev derin akıl yürütme gerektirmez; düşünmeyi düşük tutmak yanıtı belirgin hızlandırır.
+// Gram tahmini (servis edilmiş tabak) hacim ve yoğunluk hesabı içerdiği için 'medium' ile biraz daha düşünür.
 // Gemini 2.5 ailesi thinkingBudget, Gemini 3.x ailesi thinkingLevel kullanır. Model parametreyi reddederse
 // istek bir kez parametresiz tekrarlanır ve bu model için bir daha gönderilmez.
 const noThinkingConfig = new Set();
-function thinkingConfigFor(model) {
-  return /2\.5/.test(model) ? { thinkingBudget: 0 } : { thinkingLevel: 'low' };
+function thinkingConfigFor(model, level = 'low') {
+  if (/2\.5/.test(model)) return { thinkingBudget: level === 'medium' ? 1024 : 0 };
+  return { thinkingLevel: level };
 }
 
 // Ücretsiz kotada 429 yanıtı, ne kadar beklenmesi gerektiğini RetryInfo.retryDelay ("17s") ile bildirir.
@@ -215,10 +222,10 @@ function retryDelayMs(payload) {
 }
 
 // Zaman aşımı yoktur: ücretsiz sürümde yanıt gecikebilir, istek kullanıcı iptal edene kadar beklenir.
-export async function callGemini({ apiKey, model = DEFAULT_MODEL, body, fetchImpl = fetch, baseUrl = 'https://generativelanguage.googleapis.com', signal, raw = false, thinking = true }) {
+export async function callGemini({ apiKey, model = DEFAULT_MODEL, body, fetchImpl = fetch, baseUrl = 'https://generativelanguage.googleapis.com', signal, raw = false, thinking = 'low' }) {
   const send = async withThinking => {
     const request = withThinking
-      ? { ...body, generationConfig: { ...body.generationConfig, thinkingConfig: thinkingConfigFor(model) } }
+      ? { ...body, generationConfig: { ...body.generationConfig, thinkingConfig: thinkingConfigFor(model, thinking === true ? 'low' : thinking) } }
       : body;
     const response = await fetchImpl(`${baseUrl}/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
       method: 'POST',

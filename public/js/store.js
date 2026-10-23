@@ -1,7 +1,7 @@
 // Cihazda (öğretmen tableti/telefonu) tutulan veri. Fotoğraflar asla saklanmaz; yalnızca ölçüm sonuçları.
 import { footprint } from './impact.js';
 
-const KEY = 'tabakiz.v1';
+const KEY = 'kirinti.v1';
 
 const DEFAULT_MENU = {
   1: ['Mercimek çorbası', 'Tavuk sote', 'Bulgur pilavı', 'Ayran'],

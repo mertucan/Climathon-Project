@@ -34,7 +34,7 @@ const FLAGS = {
   }
 };
 export const flag = code => `<span class="flag">${(FLAGS[code] || FLAGS.tr)()}</span>`;
-const KEY = 'tabakiz.lang';
+const KEY = 'kirinti.lang';
 
 let lang = (() => {
   try {
@@ -95,5 +95,5 @@ export const category = key => t(CATEGORY_LABEL[key] || CATEGORY_LABEL.diger);
 export function translateStatic(root = document) {
   root.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
   root.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
-  document.title = t('Tabak İz: Okul yemeğinde israfı ölç, azalt');
+  document.title = t('Kırıntı: Okul yemeğinde israfı ölç, azalt');
 }

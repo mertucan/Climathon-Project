@@ -1,10 +1,10 @@
 # Yayına Alma ve Mobil Teslim Rehberi
 
-Bu rehber Tabak İz'i yayına almayı, telefona kurmayı ve teslimden önce doğrulama pilotunu çalıştırmayı adım adım anlatır. Toplam süre yaklaşık 30 dakikadır (pilot dahil).
+Bu rehber Kırıntı'yı yayına almayı, telefona kurmayı ve teslimden önce doğrulama pilotunu çalıştırmayı adım adım anlatır. Toplam süre yaklaşık 30 dakikadır (pilot dahil).
 
 ## Neden PWA? (mobil teslim kararı)
 
-Jürinin ürünü **sen yanında olmadan** deneyebilmesi gerekiyor. Mağaza uygulamasıyla (Play Store / App Store) bu zor: inceleme günler sürer, jürinin bir şey indirmesi gerekir, iOS'ta TestFlight daveti şarttır. Bu yüzden Tabak İz bir **PWA (Progressive Web App)**:
+Jürinin ürünü **sen yanında olmadan** deneyebilmesi gerekiyor. Mağaza uygulamasıyla (Play Store / App Store) bu zor: inceleme günler sürer, jürinin bir şey indirmesi gerekir, iOS'ta TestFlight daveti şarttır. Bu yüzden Kırıntı bir **PWA (Progressive Web App)**:
 
 - Tek bir link telefonda, tablette ve bilgisayarda açılır; kurulum gerekmez.
 - "Ana ekrana ekle" ile uygulama simgesiyle tam ekran açılır, çevrimdışı da başlar.
@@ -33,7 +33,7 @@ Gemini anahtarı yalnızca sunucuda durur ve tarayıcıya hiç gönderilmez. Bu 
 
 ```bash
 git add -A
-git commit -m "Tabak İz final: PWA, jüri turu, sesli geri bildirim, TR/EN, tahmin, pilot, rapor"
+git commit -m "Kırıntı final: PWA, jüri turu, sesli geri bildirim, TR/EN, tahmin, pilot, rapor"
 git push origin main
 ```
 
@@ -54,7 +54,7 @@ git push origin main
    | `GEMINI_TTS_MODEL` | ör. `gemini-2.5-flash-preview-tts` | Hayır (uygulama güncel TTS modelini kendisi bulur) |
 
 5. **Deploy**'a bas. Çıkan `https://<proje>.vercel.app` linkini telefonda aç; üst sağda **"Gemini bağlı"** yazmalı (dar ekranda "Gemini ✓").
-6. İsteğe bağlı: **Settings → Domains** bölümünden adı `tabak-iz.vercel.app` gibi kısa bir şeye çevir.
+6. İsteğe bağlı: **Settings → Domains** bölümünden adı `kirinti.vercel.app` gibi kısa bir şeye çevir.
 
 **Uzun süren yanıtlar:** Fonksiyonların süre sınırı `maxDuration: 300` (5 dk) olarak ayarlı. Vercel bu değeri kabul etmezse (eski projelerde Hobby planında sınır 60 sn olabilir), `api/analyze.js`, `api/suggest.js` ve `api/tts.js` dosyalarında `300` değerini `60` yapıp tekrar gönder. Uygulama, sunucu süre sınırına takılan istekleri de otomatik tekrar dener; kullanıcı yine sonucu alır.
 
@@ -63,7 +63,7 @@ git push origin main
 ## 4. Alternatif: Google Cloud Run (tamamen Google altyapısı)
 
 ```bash
-gcloud run deploy tabak-iz --source . --region europe-west1 --allow-unauthenticated \
+gcloud run deploy kirinti --source . --region europe-west1 --allow-unauthenticated \
   --timeout 3600 --set-env-vars GEMINI_API_KEY=ANAHTARIN
 ```
 
@@ -95,7 +95,7 @@ Uygulamanın **Kanıt** sekmesinde iki doğrulama pilotu var. İkisi de gerçek 
 3. Bitince kartlarda metrikler ve dağılım grafiği görünür:
    - Pilot 1: ortalama mutlak hata (puan), ±15 puan içindeki oran, korelasyon.
    - Pilot 2: ortalama gram hatası, ortalama yüzde hata, ±%25 içindeki oran, kalori hatası.
-4. Aynı sekmedeki **Ölçüm yöntemleri karşılaştırması** tablosunda Tabak İz satırı bu sonuçlarla kendiliğinden dolar.
+4. Aynı sekmedeki **Ölçüm yöntemleri karşılaştırması** tablosunda Kırıntı satırı bu sonuçlarla kendiliğinden dolar.
 5. Rakamları PDR'a, form cevaplarına, videoya ve `docs/BENCHMARK.md` dosyasındaki "_pilot çalıştırılınca eklenecek_" yerlerine ekle. Örnek cümle: "16 terazide tartılmış tabakta Gemini'nin gram tahmini ortalama %X sapıyor; 14 gerçek fotoğrafta insan tahminine ortalama Y puan yakın."
 6. **Okul etki raporu (PDF)** iki pilot sonucunu da rapora ekler.
 

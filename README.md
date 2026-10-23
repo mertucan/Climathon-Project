@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="public/icons/icon-192.png" alt="Tabak İz logosu" width="96" height="96">
+<img src="public/icons/icon-192.png" alt="Kırıntı logosu" width="96" height="96">
 
-# Tabak İz
+# Kırıntı
 
 **Bir tabak fotoğrafı, daha az israf.**
 
@@ -90,7 +90,7 @@ flowchart LR
 <table>
   <tr>
     <td align="center" width="25%"><img src="docs/screenshots/17-kanit-dunya.jpg" alt="Dünyada okul tabak artığı karşılaştırması" width="220"><br><sub>Dünyada okul tabak artığı (kaynaklı)</sub></td>
-    <td align="center" width="25%"><img src="docs/screenshots/18-kanit-yemek-grubu.jpg" alt="Yemek grubuna göre artık: USDA ve Tabak İz" width="220"><br><sub>Yemek grubuna göre: USDA ve Tabak İz</sub></td>
+    <td align="center" width="25%"><img src="docs/screenshots/18-kanit-yemek-grubu.jpg" alt="Yemek grubuna göre artık: USDA ve Kırıntı" width="220"><br><sub>Yemek grubuna göre: USDA ve Kırıntı</sub></td>
     <td align="center" width="25%"><img src="docs/screenshots/19-kanit-cozumler.jpg" alt="Mevcut çözümlerle karşılaştırma" width="220"><br><sub>Mevcut çözümlerle karşılaştırma</sub></td>
     <td align="center" width="25%"><img src="docs/screenshots/20-kanit-mudahaleler.jpg" alt="Müdahalelerin etkisi ve hedefimiz" width="220"><br><sub>Müdahalelerin etkisi ve %25 hedefimiz</sub></td>
   </tr>
@@ -154,9 +154,11 @@ Bunlara ek olarak:
 | 1. Görsel | 14 açık lisanslı (CC BY-SA) gerçek tabak fotoğrafı: Türk okul menüleri, okul tepsileri, yarım ve bitmiş tabaklar | İnsan görsel tahmini (Comstock benzeri; ±10-15 puan belirsizlik) | Artık yüzdesi: ortalama mutlak hata, ±15 puan içindeki oran, korelasyon |
 | 2. Terazi | 16 kafeterya tabağı, **Google Nutrition5k** (CC BY 4.0) | **Terazide tartılmış gerçek kütle ve kalori** | Gram tahmini: ortalama yüzde hata, ±%25 içindeki oran, kalori hatası |
 
+**İlk sonuçlar (canlı uygulama, 23 Ekim 2026):** Pilot 1'de Gemini'nin artık tahmini insan tahminine ortalama **6,3 puan** yakın, tahminlerin **%86**'sı ±15 puan içinde, **r = 0,96**. Pilot 2'nin ilk ölçümünde bir test kurgusu hatası bulundu (tabaklar "yemek sonrası" olarak gönderildiği için Gemini gramı fotoğraftan ölçmedi); "servis edilmiş tabak" moduyla düzeltildi ve yeniden ölçülecek.
+
 Sahada ise sonuç ekranına girilen gerçek tartımla yapay zekâ tahmininin sapması otomatik raporlanır. Ayrıntılar ve sınırlılıklar: [docs/BENCHMARK.md](docs/BENCHMARK.md).
 
-**Benchmark özeti:** Ticari sistemler (Winnow, Leanpath, KITRO, Nuvilab) ölçmenin israfı azalttığını gösteriyor; firmalar %30-35 azalma bildiriyor. Ancak bu sistemler özel kamera ve tartı donanımı ile lisans gerektiriyor ve çoğu kurumsal mutfaklara odaklanıyor. Tabak İz'in %25 hedefi firma açıklamalarının altında tutuldu. Fark: donanım gerektirmiyor, çocuğa sesli ve suçlamayan geri bildirim veriyor, ertesi gün üretim tahmini yapıyor.
+**Benchmark özeti:** Ticari sistemler (Winnow, Leanpath, KITRO, Nuvilab) ölçmenin israfı azalttığını gösteriyor; firmalar %30-35 azalma bildiriyor. Ancak bu sistemler özel kamera ve tartı donanımı ile lisans gerektiriyor ve çoğu kurumsal mutfaklara odaklanıyor. Kırıntı'nın %25 hedefi firma açıklamalarının altında tutuldu. Fark: donanım gerektirmiyor, çocuğa sesli ve suçlamayan geri bildirim veriyor, ertesi gün üretim tahmini yapıyor.
 
 ## Mimari
 
@@ -251,4 +253,4 @@ Uygulamadaki tüm dış rakamlar numaralı kaynaklara dayanır. Tam kaynakça (1
 
 ---
 
-<sub>Tabak İz · Climathon 2026 · Mert Uçan</sub>
+<sub>Kırıntı · Climathon 2026 · Mert Uçan</sub>

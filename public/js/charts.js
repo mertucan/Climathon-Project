@@ -65,7 +65,7 @@ export function compareBars(rows, max) {
       <span class="bar-value">${esc(r.display)}</span></li>`).join('')}</ul>`;
 }
 
-// İki seri yan yana (ör. literatür ve Tabak İz). Gri = literatür, yeşil = Tabak İz; lejant çağıran tarafta.
+// İki seri yan yana (ör. literatür ve Kırıntı). Gri = literatür, yeşil = Kırıntı; lejant çağıran tarafta.
 export function pairedBars(rows, max) {
   const top = max || Math.max(...rows.flatMap(r => [r.a, r.b ?? 0])) * 1.1;
   return `<ul class="bars paired">${rows.map(r => `
