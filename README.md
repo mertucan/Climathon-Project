@@ -154,7 +154,7 @@ Bunlara ek olarak:
 | 1. Görsel | 14 açık lisanslı (CC BY-SA) gerçek tabak fotoğrafı: Türk okul menüleri, okul tepsileri, yarım ve bitmiş tabaklar | İnsan görsel tahmini (Comstock benzeri; ±10-15 puan belirsizlik) | Artık yüzdesi: ortalama mutlak hata, ±15 puan içindeki oran, korelasyon |
 | 2. Terazi | 16 kafeterya tabağı, **Google Nutrition5k** (CC BY 4.0) | **Terazide tartılmış gerçek kütle ve kalori** | Gram tahmini: ortalama yüzde hata, ±%25 içindeki oran, kalori hatası |
 
-**İlk sonuçlar (canlı uygulama, 23 Ekim 2026):** Pilot 1'de Gemini'nin artık tahmini insan tahminine ortalama **6,3 puan** yakın, tahminlerin **%86**'sı ±15 puan içinde, **r = 0,96**. Pilot 2'nin ilk ölçümünde bir test kurgusu hatası bulundu (tabaklar "yemek sonrası" olarak gönderildiği için Gemini gramı fotoğraftan ölçmedi); "servis edilmiş tabak" moduyla düzeltildi ve yeniden ölçülecek.
+**İlk sonuçlar (canlı uygulama, 23 Ekim 2026):** Pilot 1'de Gemini'nin artık tahmini insan tahminine ortalama **6,3 puan** yakın, tahminlerin **%86**'sı ±15 puan içinde, **r = 0,96**. Pilot 2'nin ilk ölçümünde bir test kurgusu hatası bulundu (tabaklar "yemek sonrası" olarak gönderildiği için Gemini gramı fotoğraftan ölçmedi). "Servis edilmiş tabak" moduyla düzeltilince gram hatası **%44 → %32**, kalori hatası **%46 → %29**, dokunulmamış tabak tanıma **%27 → %100** oldu. Kalan sistematik ~%30 eksik tahmin, etki hesaplarını ihtiyatlı tarafta tutuyor; sahada tartımla düzeltme katsayısı hesaplanabilir.
 
 Sahada ise sonuç ekranına girilen gerçek tartımla yapay zekâ tahmininin sapması otomatik raporlanır. Ayrıntılar ve sınırlılıklar: [docs/BENCHMARK.md](docs/BENCHMARK.md).
 

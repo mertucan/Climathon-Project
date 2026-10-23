@@ -62,7 +62,7 @@ Bu doküman Kırıntı'yı dört eksende karşılaştırır: (1) problemin büy�
 |---|---|---|---|---|
 | Dijital fotoğraf + uzman | Hastane validasyonunda tartımla r = 0,99, ortalama fark 4,7 g | Fotoğraf hızlı, değerlendirme sonradan uzmanca | Kamera | [9] |
 | Derin öğrenme (özel eğitimli) | YOLOv11 mAP 0,343; U-Net mIoU %68,6 (tespit metrikleri, gram hatası değil) | Özel veri seti ve model eğitimi gerekir | Kamera + GPU | [10][11] |
-| **Kırıntı (Gemini, eğitim yok)** | **Artık %: insan tahminine ortalama 6,3 puan, r = 0,96 (14 fotoğraf). Gram: ilk ölçümde %44 hata, düzeltme sonrası yeniden ölçülecek (Bölüm 6)** | Analiz başına ~6 sn; yeni menüye eğitim gerekmez | Telefon / tablet | – |
+| **Kırıntı (Gemini, eğitim yok)** | **Artık %: insan tahminine ortalama 6,3 puan, r = 0,96 (14 fotoğraf). Gram: terazi ölçümüne göre %32 hata, sistematik ~%30 eksik tahmin (14 tabak; Bölüm 6)** | Analiz başına ~6 sn; yeni menüye eğitim gerekmez | Telefon / tablet | – |
 
 **Çıkarım:** Fotoğraf temelli ölçüm tartımla çok yakın sonuç verebiliyor [9], ama uzmanın fotoğrafları tek tek değerlendirmesini gerektiriyor. Kırıntı bu değerlendirmeyi Gemini ile otomatikleştiriyor. Özel eğitimli modeller ise menü değiştikçe yeni veri seti ve yeniden eğitim istiyor [10][11].
 
@@ -138,7 +138,25 @@ Bu doküman Kırıntı'yı dört eksende karşılaştırır: (1) problemin büy�
   **Teşhis:** Sonuç zayıf, ama son satır sebebi gösteriyor. Tabaklar yenmemiş olduğu halde Gemini yalnızca %27'sine "dokunulmamış" dedi. Bu ilk sürümde tabaklar "yemek **sonrası** fotoğrafı" olarak gönderildi. Yönerge, kısmen yenmiş görünen yemeklerde gram için standart porsiyon kullanılmasını söylüyordu; Gemini tabakların çoğunu yarı yenmiş sandığı için fotoğraftaki miktarı ölçmek yerine standart porsiyon yazdı. Korelasyonun sıfıra düşmesi, gram tahmininin fotoğraftan kopmasından kaynaklanıyor. Yani bu ölçüm Gemini'nin gram ölçme becerisini değil, test kurgusundaki bir hatayı gösterdi.
 
   **Düzeltme (v2):** Gerçek kullanımda servis gramı "önce" fotoğrafından gelir. Terazi pilotu artık bu yolu test ediyor: tabak Gemini'ye "servis edilmiş, henüz yenmemiş" bilgisiyle gönderiliyor. Yönergeye ölçek ipuçları (tabak ~26-27 cm, tepsi bölmesi, çatal), yemek türüne göre yoğunluklar ve "gördüğün miktarı tahmin et, standart porsiyon varsayma" kuralı eklendi; gram tahmininde model orta düzeyde düşünüyor. Aynı iyileştirme uygulamadaki normal önce/sonra analizine de uygulandı.
-- **Sonuç (v2):** _[düzeltilmiş sürümle yeniden çalıştırılınca eklenecek]_
+- **Sonuç (v2, canlı uygulama, 23 Ekim 2026):**
+
+  | Metrik | v1 | **v2** |
+  |---|---|---|
+  | Analiz edilen tabak | 15 / 16 | 14 / 16 |
+  | "Dokunulmamış" diye tanınan | %27 | **%100** |
+  | Ortalama mutlak hata | 140 g | **129 g** |
+  | Ortalama yüzde hata | %44 | **%32** |
+  | ±%25 içinde | %47 | %36 |
+  | Kalori hatası | %46 | **%29** |
+  | Korelasyon | −0,03 | **0,36** |
+  | Eğilim | −16 g | −101 g |
+  | Ortalama süre | 12,2 sn | 7,8 sn |
+
+  **Yorum:** Düzeltme işe yaradı: Gemini artık tabakların hepsini doğru biçimde "dokunulmamış" tanıyor; yüzde hata, kalori hatası ve korelasyon belirgin iyileşti. Geriye **sistematik eksik tahmin** kalıyor: Gemini tek bir üstten fotoğrafta tabak başına ortalama ~100 g (~%30) az söylüyor. Bunun iki sonucu var:
+  1. **Etki hesapları ihtiyatlı kalır:** Gram eksik tahmin edildiği için kurtarılan gıda, CO₂e ve TL olduğundan az görünür, abartılmaz.
+  2. **Artık yüzdesi büyük ölçüde etkilenmez:** Aynı tabakta servis gramı da kalan gram da aynı yönde eksik tahmin edilir, oran korunur. Pilot 1'de artık yüzdesinin insan tahminine 6,3 puan yakın çıkması bunu destekliyor.
+
+  **Sonraki adım:** Eğilim tutarlı olduğu için sahada tartımla bir okul düzeltme katsayısı (ör. ×1,3) hesaplanabilir; uygulamadaki Tartım alanı bunun için var. Bir ölçek nesnesi (ör. sabit boyutlu tepsi) ya da iki açıdan fotoğraf da derinlik belirsizliğini azaltır.
 - **Sınırlılık:** Nutrition5k tabakları ABD kafeterya yemekleridir, Türk okul menüsü değildir. Gram tahmini, artık tahmininin temelidir (kalan gram = servis gramı × artık oranı); bu pilot ölçüm zincirinin ilk halkasını gerçek kütleyle sınar.
 
 ### Sahada sonraki adım
